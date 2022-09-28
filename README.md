@@ -13,6 +13,10 @@ ao utilizar essa API poderosa;
 
 Mais sobre: https://www.devmedia.com.br/java-streams-api-manipulando-colecoes-de-forma-eficiente/37630
 
+#### Documentação oficial:
+
+- [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
+- [Collectors](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html)
 
 #### Você encontra exemplos em: [Main.java](https://github.com/DeividFrancis/java-streams/blob/main/src/com/github/deividfrancis/Main.java)
 
