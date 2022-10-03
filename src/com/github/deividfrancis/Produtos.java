@@ -50,6 +50,6 @@ public class Produtos {
 	
 	@Override
 	public String toString() {
-		return "Produto [Id=" + id + ", Nome=" + nome + ", Valor=R$" + valor + ", categoria=" + categoria + ", temEstoque=" + temEstoque +"]\n\n";
+		return "Id=" + id + ", Nome=" + nome + ", Valor=R$" + valor + ", categoria=" + categoria + ", temEstoque=" + temEstoque +"\n\n";
 	}
 }

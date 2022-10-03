@@ -2,7 +2,10 @@ package com.github.deividfrancis;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
+
+import com.github.deividfrancis.backup.Person;
 
 public class Carrinho {
 	private static List<Produtos> produtoList = new ArrayList<Produtos>();
@@ -22,12 +25,14 @@ public class Carrinho {
 
 
 	public static void main(String[] args) {
-//				filtroTecnologia();
-//       		filtroEstoqueValor200();
-//              filtroTemEstoque();
-//              filtroEsporte();
-//				filtroPrimeiraEquipamentos();
-//				agrupaAlfabetica();
+		//				filtroTecnologia();
+		//       		filtroEstoqueValor200();
+		//              filtroTemEstoque();
+		//              filtroEsporte();
+		//				filtroPrimeiraEquipamentos();
+		//				agrupaAlfabetica();
+//						groupByCategoria();
+		getMaiorValor();
 	}
 
 
@@ -77,6 +82,20 @@ public class Carrinho {
 	public static void agrupaAlfabetica() {
 		List<Produtos> produtoTempList = produtoList.stream()
 				.sorted((x1 , x2) -> x1.getNome().compareTo(x2.getNome()))
+				.toList();
+
+		System.out.println(produtoTempList);
+	}
+
+	public static void groupByCategoria() {
+		Map<String, List<Produtos>> produtoMap = produtoList.stream().collect(Collectors.groupingBy(Produtos::getCategoria));
+
+		System.out.println(produtoMap);
+	}
+	
+	private static void getMaiorValor() {
+		List<Produtos> produtoTempList = produtoList.stream()
+				.sorted((x1 , x2) -> x1.getValor().compareTo(x2.getValor()))
 				.toList();
 
 		System.out.println(produtoTempList);
