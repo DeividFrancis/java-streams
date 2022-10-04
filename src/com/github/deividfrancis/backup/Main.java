@@ -1,4 +1,4 @@
-package com.github.deividfrancis;
+package com.github.deividfrancis.backup;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,7 +60,7 @@ public class Main {
 		
 		imprimeTitulo("groupByLambda");
 		
-		// Objetivo é agrupar Person pelo sex
+		// Objetivo ï¿½ agrupar Person pelo sex
 
 		Map<Character, List<Person>> personMap = personList.stream().collect(Collectors.groupingBy(Person::getSex));
 		
@@ -72,7 +72,7 @@ public class Main {
 	private static void groupByNormal() {
 		imprimeTitulo("groupByNormal");
 		
-		// Objetivo é agrupar Person pelo sex
+		// Objetivo ï¿½ agrupar Person pelo sex
 		
 		Map<Character, List<Person>> personMap = new HashMap<Character, List<Person>>();
 		
@@ -96,7 +96,7 @@ public class Main {
 	private static void filtroCompostoLambda() {
 		imprimeTitulo("filtroCompostoLambda");
 		
-		// Objetivo é mostrar somente os nomes das person do sexo masculino com age maior que 22;
+		// Objetivo ï¿½ mostrar somente os nomes das person do sexo masculino com age maior que 22;
 		
 		List<String> nomes = personList.stream()
 				.filter(p -> p.getSex() == 'M')
@@ -112,7 +112,7 @@ public class Main {
 	private static void filtroCompostoNormal() {
 		imprimeTitulo("filtroCompostoNormal");
 		
-		// Objetivo é mostrar somente os nomes das person do sexo masculino com age maior que 22;
+		// Objetivo ï¿½ mostrar somente os nomes das person do sexo masculino com age maior que 22;
 		
 		List<String> nomes = new ArrayList<String>();
 		
