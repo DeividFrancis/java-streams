@@ -1,8 +1,11 @@
 package com.github.deividfrancis;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.github.deividfrancis.backup.Person;
@@ -31,8 +34,9 @@ public class Carrinho {
 		//              filtroEsporte();
 		//				filtroPrimeiraEquipamentos();
 		//				agrupaAlfabetica();
-//						groupByCategoria();
-		getMaiorValor();
+		//				groupByCategoria();
+		//				getMaiorValor();
+		//				getListIds();
 	}
 
 
@@ -92,15 +96,24 @@ public class Carrinho {
 
 		System.out.println(produtoMap);
 	}
-	
-	private static void getMaiorValor() {
-		List<Produtos> produtoTempList = produtoList.stream()
-				.sorted((x1 , x2) -> x1.getValor().compareTo(x2.getValor()))
-				.toList();
 
-		System.out.println(produtoTempList);
+	private static void getMaiorValor() {
+		Optional<Produtos> produtoTempList = produtoList.stream()
+				.sorted((x1 , x2) -> x2.getValor().compareTo(x1.getValor()))
+				.findFirst();
+
+		produtoTempList.stream().forEach(p -> {
+			System.out.println(p.getCategoria());
+		});
 	}
-}
+	private static void getListIds() {
+		List <Produtos> produtoTempList = produtoList.stream()
+				.filter(p -> 850 == p.getId() || 403 == p.getId() || 625 == p.getId())
+				.toList();
+		
+		System.out.println(produtoTempList);
+		}
+	}
 
 
 
